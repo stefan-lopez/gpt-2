@@ -16,7 +16,8 @@ def interact_model(
     length=None,
     temperature=1,
     top_k=0,
-    top_p=0.0
+    top_p=0.0,
+    suffix_stop='<|endoftext|>'
 ):
     """
     Interactively run the model
@@ -82,7 +83,10 @@ def interact_model(
                     generated += 1
                     text = enc.decode(out[i])
                     print("=" * 40 + " SAMPLE " + str(generated) + " " + "=" * 40)
-                    print(text)
+                    if suffix_stop is not None:
+                        print(raw_text + text[:text.index(suffix_stop)])
+                    else:
+                        print(raw_text + text)
             print("=" * 80)
 
 if __name__ == '__main__':
