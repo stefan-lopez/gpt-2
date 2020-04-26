@@ -1,6 +1,6 @@
-# Trump Tweet Chatbot
+# Trump Tweet Generator
 
-First and foremost thanks to the OpenAI team for providing their GPT-2 Transformer as an open source project! This is a fork of their work using some handy scripts developed by Nate Shepard (https://github.com/nshepperd) in his own fork of OpenAI's project. The model trains on a corpus of tweets from Donald Trump's entire Twitter archive in order to create a realistic chatbot.
+First and foremost thanks to the OpenAI team for providing their GPT-2 Transformer as an open source project! This is a fork of their work using some handy scripts developed by Nate Shepard (https://github.com/nshepperd) in his own fork of OpenAI's project. The model trains on a corpus of tweets from Donald Trump's entire Twitter archive in order to create a realistic tweet generator.
 
 ## Project File Overview
 
