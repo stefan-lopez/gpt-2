@@ -1,14 +1,14 @@
 # Trump Tweet Chatbot
 
-First and foremost thanks to the OpenAI team for providing their GPT-2 Transformer as an open source project! This is a fork of their work which uses a corpus of tweets from Donald Trump's entire Twitter archive in order to create a realistic chatbot.  
+First and foremost thanks to the OpenAI team for providing their GPT-2 Transformer as an open source project! This is a fork of their work using some handy scripts developed by Nate Shepard (https://github.com/nshepperd) in his own fork of OpenAI's project. The model trains on a corpus of tweets from Donald Trump's entire Twitter archive in order to create a realistic chatbot.
 
 ## Project File Overview
 
 - [`download_model.py`](download_model.py) script used to download OpenAI models.
 - [`tweet_preprocessor.py`](tweet_preprocessor.py) my personal script for preprocessing tweets in csv file.
-- [`src/encode.py`](src/encode.py) script for encoding tweets into a format the model can read.
-- [`src/train.py`](src/train.py) script for training your own GPT-2 model.
-- [`src/interactive_conditional_samples.py`](src/interactive_conditional_samples.py) function for interactive text generation, with small change made by me for the option to stop generation after one tweet.
+- [`src/encode.py`](src/encode.py) Nate Sheppard's script for encoding tweets into a format the model can read.
+- [`src/train.py`](src/train.py) Nate Sheppard's script for training your own GPT-2 model.
+- [`src/interactive_conditional_samples.py`](src/interactive_conditional_samples.py) script for interactive text generation, with small change made by me for the option to stop generation after one tweet.
 - [`trump_tweets.csv`](trump_tweets.csv) a file of tweets from Donald Trump's Twitter account.
 
 ## Requirements
@@ -78,7 +78,8 @@ mkdir models/tweeter
 ```
 
 Go to checkpoint/run1/ folder and copy the following files: checkpoint, model-XXXX.data-00000-of-00001, model-XXXX.index, model-XXXX.meta. Paste them into your tweeter folder.
-Go to models/117M and copy the following files: encoder.json, hparams.json, vocab.bpe. Paste them into your tweeter folder.
+
+Go to models/117M and copy the following files: encoder.json, hparams.json, vocab.bpe. Paste them into your tweeter folder as well.
 
 Run your trained model and feed it prompts to react to. It tends to work best if your prompt is open-ended and ends with a verb (ex. "America is"). If you use a person's name in your prompt, be sure to capitalize it properly for best results.
 
